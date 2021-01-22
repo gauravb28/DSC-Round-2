@@ -1,0 +1,525 @@
+.container {
+  max-width: 1100px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-main {
+  color: #ffbc00;
+}
+
+.text-second {
+  color: #c72727;
+}
+
+.bg-dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.bg-light {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.py-4 {
+  padding: 4rem 0;
+}
+
+.py-6 {
+  padding: 6rem 0;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+.my-4 {
+  margin: 4rem 0;
+}
+
+.my-6 {
+  margin: 6rem 0;
+}
+
+.menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger top and Bottom Lines */
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.menu-wrap .hamburger > div:after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+/* Turns lines into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover when Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: 0.75s;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: rgba(24, 39, 51, 0.85);
+  width: 200vw;
+  height: 200vh;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+  border-radius: 50%;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li a:hover {
+  color: rgba(229, 148, 0, 0.9);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Dosis";
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 3px;
+}
+
+#about {
+  background: url("../img/About-bg.jpg") no-repeat center center/cover;
+  height: 100vh;
+}
+
+#about .content {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+#about .content img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+#about .content h1 {
+  font-size: 4rem;
+  padding-bottom: 2rem;
+  text-decoration: underline;
+  text-decoration-color: #ffbc00;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 3px;
+}
+
+#about .content p {
+  font-size: 1.75rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+#hobby {
+  height: 100vh;
+}
+
+#hobby .hobbies h2 {
+  font-size: 4rem;
+  margin-left: 30vw;
+  padding-bottom: 1rem;
+  text-decoration-color: #c72727;
+  color: #333;
+}
+
+#hobby .hobbies ul {
+  list-style: square;
+  margin-left: 33vw;
+}
+
+#hobby .hobbies ul li {
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+
+#skills {
+  height: 100vh;
+}
+
+#skills .head {
+  padding-top: 1.35rem;
+  padding-bottom: 0.5rem;
+}
+
+#skills .head h2 {
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 1.2rem;
+  text-decoration-color: #ffbc00;
+}
+
+#skills .head .skillset .skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 15vw 1rem 15vw;
+  border-bottom: #444 solid 1px;
+}
+
+#skills .head .skillset .skill h3 {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+#skills .head .skillset .skill i {
+  color: #ffbc00;
+}
+
+#skills .head .skillset .skill img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+#skills .head .skillset .skill:last-child {
+  border-bottom: none;
+}
+
+#contact {
+  height: 100vh;
+  padding-top: 1rem;
+}
+
+#contact .contact-form {
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#contact .contact-form h2 {
+  font-size: 3rem;
+  text-decoration: none;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+#contact .contact-form .form-wrap {
+  display: grid;
+  grid-template-areas: "name email" "phone subject" "message message";
+  grid-gap: 1rem;
+  margin-left: 10vw;
+}
+
+#contact .contact-form .form-wrap label {
+  font-weight: bold;
+  display: block;
+}
+
+#contact .contact-form .form-wrap input {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+#contact .contact-form .form-wrap input:focus,
+#contact .contact-form .form-wrap textarea:focus {
+  outline: none;
+  border: 2px solid rgba(255, 0, 0, 0.6);
+}
+
+#contact .contact-form .form-wrap .nme {
+  grid-area: name;
+}
+
+#contact .contact-form .form-wrap .eml {
+  grid-area: email;
+}
+
+#contact .contact-form .form-wrap .ph {
+  grid-area: phone;
+}
+
+#contact .contact-form .form-wrap .sub {
+  grid-area: subject;
+}
+
+#contact .contact-form .form-wrap .mes {
+  grid-area: message;
+}
+
+#contact .contact-form .form-wrap .mes textarea {
+  height: 100px;
+  width: 94%;
+  margin-top: 0.5rem;
+}
+
+#contact .contact-form .btn {
+  display: block;
+  padding: 0.5rem;
+  margin: 0.5rem auto 0 auto;
+  width: 50%;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+  transition: all 0.4s ease-in;
+}
+
+#contact .contact-form .btn:hover {
+  background: #444;
+  color: #ffbc00;
+}
+
+#contact .footer {
+  height: 30%;
+}
+
+#contact .footer .details {
+  display: flex;
+  height: 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#contact .footer .details .detail {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+#contact .footer .details .detail i {
+  padding-bottom: 0.5rem;
+  display: block;
+  text-align: center;
+}
+
+#contact .footer .details .detail h3 {
+  text-decoration: none;
+  padding-bottom: 0.4rem;
+  text-align: center;
+}
+
+#contact .footer .details .detail p {
+  text-align: center;
+}
+
+#contact .footer .details .detail:last-child h3 {
+  font-size: 2rem;
+}
+
+#contact .footer .details .social {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+  width: 75%;
+  margin: auto;
+}
+
+#contact .footer .details .social a {
+  color: #f4f4f4;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+}
+
+#contact .footer .details .social a:hover {
+  color: #ffbc00;
+  transform: scale(1.2);
+}
+
+#contact .footer .copy {
+  padding: 0.25rem 0;
+  font-size: 1.2rem;
+  background: #444;
+}
+
+@media (max-width: 768px) {
+  #about .content h1 {
+    padding-bottom: 1rem;
+  }
+  #about .content p {
+    font-size: 1.5rem;
+  }
+  #hobby .hobbies h2 {
+    margin-left: 20vw;
+  }
+  #hobby .hobbies ul {
+    margin-left: 22vw;
+  }
+  #skills .head h2 {
+    font-size: 2.5rem;
+  }
+  #skills .head .skillset .skill {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  #about .content {
+    padding-top: 2rem;
+  }
+  #about .content img {
+    height: 150px;
+    width: 150px;
+  }
+  #about .content h1 {
+    font-size: 3rem;
+  }
+  #skills .head .skillset .skill {
+    margin-left: 10vw;
+    height: 15vh;
+  }
+  #skills .head .skillset .skill img {
+    display: none;
+  }
+  #skills .head .skillset .skill h3 {
+    font-size: 1.5rem;
+  }
+  #skills .head .skillset .skill i {
+    font-size: 1.75rem;
+  }
+  #contact .contact-form .form-wrap {
+    margin-left: 5vw;
+    grid-template-areas: "name" "email" "phone" "subject" "message";
+  }
+  #contact .contact-form .form-wrap input {
+    width: 94%;
+  }
+}
+
+@media (max-width: 470px) {
+  #contact .footer .details .detail:last-child {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

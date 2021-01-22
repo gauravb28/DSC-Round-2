@@ -1,0 +1,284 @@
+@import "utilities";
+@import "menu";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Dosis";
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 3px;
+}
+
+#about {
+  background: url("../img/About-bg.jpg") no-repeat center center/cover;
+  height: 100vh;
+
+  .content {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    img {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-size: 4rem;
+      padding-bottom: 2rem;
+      text-decoration: underline;
+      text-decoration-color: $main-color;
+      text-decoration-style: wavy;
+      text-decoration-thickness: 3px;
+    }
+
+    p {
+      font-size: 1.75rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+  }
+}
+
+#hobby {
+  height: 100vh;
+
+  .hobbies {
+    h2 {
+      font-size: 4rem;
+      margin-left: 30vw;
+      padding-bottom: 1rem;
+      text-decoration-color: $second-color;
+      color: $dark-color;
+    }
+
+    ul {
+      list-style: square;
+      margin-left: 33vw;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // justify-content: space-between;
+
+      li {
+        padding: 1rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+#skills {
+  height: 100vh;
+
+  .head {
+    padding-top: 1.35rem;
+    padding-bottom: 0.5rem;
+
+    h2 {
+      text-align: center;
+      font-size: 3rem;
+      padding-bottom: 1.2rem;
+      text-decoration-color: $main-color;
+    }
+
+    .skillset {
+      .skill {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        margin: 0 15vw 1rem 15vw;
+        border-bottom: #444 solid 1px;
+
+        h3 {
+          text-decoration: none;
+          font-size: 2rem;
+        }
+
+        i {
+          color: $main-color;
+        }
+
+        img {
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+        }
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+#contact {
+  height: 100vh;
+  padding-top: 1rem;
+
+  .contact-form {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+
+    h2 {
+      font-size: 3rem;
+      text-decoration: none;
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
+    .form-wrap {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "phone subject"
+        "message message";
+      grid-gap: 1rem;
+      margin-left: 10vw;
+
+      label {
+        font-weight: bold;
+        display: block;
+      }
+
+      input {
+        margin-top: 0.5rem;
+        padding: 0.5rem 1rem;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border: 2px solid rgba(255, 0, 0, 0.6);
+      }
+
+      .nme {
+        grid-area: name;
+      }
+
+      .eml {
+        grid-area: email;
+      }
+
+      .ph {
+        grid-area: phone;
+      }
+
+      .sub {
+        grid-area: subject;
+      }
+      .mes {
+        grid-area: message;
+
+        textarea {
+          height: 100px;
+          width: 94%;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+
+    .btn {
+      display: block;
+      padding: 0.5rem;
+      margin: 0.5rem auto 0 auto;
+      width: 50%;
+      font-size: 1rem;
+      background-color: $dark-color;
+      color: #fff;
+      transition: all 0.4s ease-in;
+
+      &:hover {
+        background: #444;
+        color: $main-color;
+      }
+    }
+  }
+
+  .footer {
+    height: 30%;
+
+    .details {
+      display: flex;
+      height: 150px;
+      justify-content: space-between;
+      align-items: center;
+
+      .detail {
+        flex: 1;
+        padding-right: 1rem;
+
+        i {
+          padding-bottom: 0.5rem;
+          display: block;
+          text-align: center;
+        }
+
+        h3 {
+          text-decoration: none;
+          padding-bottom: 0.4rem;
+          text-align: center;
+        }
+
+        p {
+          text-align: center;
+        }
+
+        &:last-child {
+          h3 {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      .social {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5rem;
+        width: 75%;
+        margin: auto;
+
+        a {
+          color: #f4f4f4;
+          text-decoration: none;
+          transition: all 0.3s ease-in;
+
+          &:hover {
+            color: $main-color;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    .copy {
+      padding: 0.25rem 0;
+      font-size: 1.2rem;
+      background: #444;
+    }
+  }
+}
+
+@import "media";

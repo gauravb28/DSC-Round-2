@@ -1,0 +1,112 @@
+@media (max-width: 768px) {
+  #about {
+    .content {
+      h1 {
+        padding-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  #hobby {
+    .hobbies {
+      h2 {
+        margin-left: 20vw;
+      }
+
+      ul {
+        margin-left: 22vw;
+      }
+    }
+  }
+
+  #skills {
+    .head {
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      .skillset {
+        .skill {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  #about {
+    .content {
+      padding-top: 2rem;
+
+      img {
+        height: 150px;
+        width: 150px;
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  #skills {
+    .head {
+      .skillset {
+        .skill {
+          margin-left: 10vw;
+          height: 15vh;
+
+          img {
+            display: none;
+          }
+
+          h3 {
+            font-size: 1.5rem;
+          }
+
+          i {
+            font-size: 1.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  #contact {
+    .contact-form {
+      .form-wrap {
+        margin-left: 5vw;
+
+        grid-template-areas:
+          "name"
+          "email"
+          "phone"
+          "subject"
+          "message";
+
+        input {
+          width: 94%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  #contact {
+    .footer {
+      .details {
+        .detail {
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+// Variables
+$main-color: #ffbc00;
+$dark-color: #333;
+$medium-color: #ccc;
+$light-color: #f4f4f4;
+$second-color: #c72727;
+
+.container {
+  max-width: 1100px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-main {
+  color: $main-color;
+}
+
+.text-second {
+  color: $second-color;
+}
+
+// Backgrounds
+.bg-dark {
+  background-color: $dark-color;
+  color: #fff;
+}
+
+.bg-light {
+  background-color: $light-color;
+  color: $dark-color;
+}
+
+// Padding
+.py {
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+  &-6 {
+    padding: 6rem 0;
+  }
+}
+
+.my {
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
+  &-6 {
+    margin: 6rem 0;
+  }
+}

@@ -212,7 +212,6 @@ h3 {
   font-family: "Dosis";
   text-transform: uppercase;
   text-decoration: underline;
-  text-decoration-style: wavy;
   text-decoration-thickness: 3px;
 }
 
@@ -242,10 +241,7 @@ h3 {
 #about .content h1 {
   font-size: 4rem;
   padding-bottom: 2rem;
-  text-decoration: underline;
   text-decoration-color: #ffbc00;
-  text-decoration-style: wavy;
-  text-decoration-thickness: 3px;
 }
 
 #about .content p {
@@ -520,6 +516,12 @@ h3 {
 @media (max-width: 470px) {
   #contact .footer .details .detail:last-child {
     display: none;
+  }
+}
+
+@media (max-width: 370px) {
+  #about .content p {
+    font-size: 1.35rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

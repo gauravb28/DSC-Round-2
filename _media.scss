@@ -110,3 +110,13 @@
     }
   }
 }
+
+@media (max-width: 370px) {
+  #about {
+    .content {
+      p {
+        font-size: 1.35rem;
+      }
+    }
+  }
+}

@@ -5,6 +5,33 @@
   overflow: hidden;
 }
 
+.line-ab {
+  height: 3px;
+  width: 250px;
+  margin: auto;
+  padding-top: 1.5px;
+  background-color: #ffbc00;
+  margin-bottom: 1.75rem;
+}
+
+.line-hb {
+  height: 3px;
+  width: 150px;
+  margin: auto;
+  padding-top: 1.5px;
+  background-color: #c72727;
+  margin-bottom: 1.5rem;
+}
+
+.line-sk {
+  height: 3px;
+  width: 60px;
+  margin: auto;
+  padding-top: 1.5px;
+  background-color: #ffbc00;
+  margin-bottom: 1.1rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -211,8 +238,6 @@ h2,
 h3 {
   font-family: "Dosis";
   text-transform: uppercase;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
 }
 
 #about {
@@ -240,8 +265,6 @@ h3 {
 
 #about .content h1 {
   font-size: 4rem;
-  padding-bottom: 2rem;
-  text-decoration-color: #ffbc00;
 }
 
 #about .content p {
@@ -257,8 +280,6 @@ h3 {
 #hobby .hobbies h2 {
   font-size: 4rem;
   margin-left: 30vw;
-  padding-bottom: 1rem;
-  text-decoration-color: #c72727;
   color: #333;
 }
 
@@ -284,8 +305,6 @@ h3 {
 #skills .head h2 {
   text-align: center;
   font-size: 3rem;
-  padding-bottom: 1.2rem;
-  text-decoration-color: #ffbc00;
 }
 
 #skills .head .skillset .skill {
@@ -298,7 +317,6 @@ h3 {
 }
 
 #skills .head .skillset .skill h3 {
-  text-decoration: none;
   font-size: 2rem;
 }
 
@@ -328,7 +346,6 @@ h3 {
 
 #contact .contact-form h2 {
   font-size: 3rem;
-  text-decoration: none;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
@@ -421,7 +438,6 @@ h3 {
 }
 
 #contact .footer .details .detail h3 {
-  text-decoration: none;
   padding-bottom: 0.4rem;
   text-align: center;
 }

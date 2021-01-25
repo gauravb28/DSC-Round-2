@@ -2,6 +2,11 @@
 @media (max-width: 768px) {
   #about {
     .content {
+      img {
+        height: 150px;
+        width: 150px;
+      }
+
       h1 {
         padding-bottom: 1rem;
       }

@@ -261,8 +261,8 @@ h3 {
 }
 
 #about .content img {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   border-radius: 50%;
 }
 
@@ -271,7 +271,7 @@ h3 {
 }
 
 #about .content p {
-  font-size: 1.75rem;
+  font-size: 1.7rem;
   max-width: 1100px;
   margin: auto;
 }
@@ -528,6 +528,10 @@ h3 {
 }
 
 @media (max-width: 768px) {
+  #about .content img {
+    height: 150px;
+    width: 150px;
+  }
   #about .content h1 {
     padding-bottom: 1rem;
   }

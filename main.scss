@@ -36,8 +36,8 @@ h3 {
     padding-right: 3rem;
 
     img {
-      height: 200px;
-      width: 200px;
+      height: 150px;
+      width: 150px;
       border-radius: 50%;
     }
 
@@ -57,16 +57,25 @@ h3 {
 #hobby {
   height: 100vh;
 
+  h2 {
+    font-size: 4rem;
+    margin-left: 30vw;
+    color: $dark-color;
+    margin-top: 2rem;
+  }
+
   .hobbies {
-    h2 {
-      font-size: 4rem;
-      margin-left: 30vw;
-      color: $dark-color;
-    }
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas:
+      "manga lists shows"
+      "wiki lists edit"
+      "guitar lists cricket";
+    margin-left: 10vw;
 
     ul {
       list-style: square;
-      margin-left: 33vw;
+      margin-left: 3vw;
       // display: flex;
       // flex-direction: column;
       // align-items: center;
@@ -75,7 +84,41 @@ h3 {
       li {
         padding: 1rem;
         font-size: 1.4rem;
+        margin-bottom: 1rem;
       }
+    }
+
+    img {
+      height: 130px;
+      width: 150px;
+    }
+
+    .lists {
+      grid-area: lists;
+    }
+
+    .manga {
+      grid-area: manga;
+    }
+
+    .shows {
+      grid-area: shows;
+    }
+
+    .wiki {
+      grid-area: wiki;
+    }
+
+    .edit {
+      grid-area: edit;
+    }
+
+    .guitar {
+      grid-area: guitar;
+    }
+
+    .cricket {
+      grid-area: cricket;
     }
   }
 }

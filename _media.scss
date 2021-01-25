@@ -71,8 +71,10 @@
             font-size: 1.5rem;
           }
 
-          i {
-            font-size: 1.75rem;
+          .stars {
+            i {
+              font-size: 1.75rem;
+            }
           }
         }
       }
@@ -108,6 +110,14 @@
             display: none;
           }
         }
+      }
+    }
+  }
+
+  #about {
+    .content {
+      h1 {
+        font-size: 2.5rem;
       }
     }
   }

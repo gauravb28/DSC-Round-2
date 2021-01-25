@@ -210,16 +210,19 @@
   color: #fff;
   font-size: 1.5rem;
   padding: 1rem;
+  display: block;
 }
 
 .menu-wrap .menu > div > div > ul > li a {
   color: inherit;
   text-decoration: none;
   transition: color 0.4s ease;
+  padding: 0.5rem 1rem;
 }
 
 .menu-wrap .menu > div > div > ul > li a:hover {
   color: rgba(229, 148, 0, 0.9);
+  background: #101a23;
 }
 
 * {
@@ -318,9 +321,15 @@ h3 {
 
 #skills .head .skillset .skill h3 {
   font-size: 2rem;
+  flex: 1;
 }
 
-#skills .head .skillset .skill i {
+#skills .head .skillset .skill .stars {
+  flex: 2;
+  text-align: right;
+}
+
+#skills .head .skillset .skill .stars i {
   color: #ffbc00;
 }
 
@@ -328,6 +337,7 @@ h3 {
   width: 90px;
   height: 90px;
   border-radius: 50%;
+  margin-right: 7vw;
 }
 
 #skills .head .skillset .skill:last-child {
@@ -517,7 +527,7 @@ h3 {
   #skills .head .skillset .skill h3 {
     font-size: 1.5rem;
   }
-  #skills .head .skillset .skill i {
+  #skills .head .skillset .skill .stars i {
     font-size: 1.75rem;
   }
   #contact .contact-form .form-wrap {
@@ -532,6 +542,9 @@ h3 {
 @media (max-width: 470px) {
   #contact .footer .details .detail:last-child {
     display: none;
+  }
+  #about .content h1 {
+    font-size: 2.5rem;
   }
 }
 

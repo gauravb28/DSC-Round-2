@@ -604,8 +604,15 @@ h3 {
 }
 
 @media (max-width: 400px) {
+  #hobby h2 {
+    margin-left: 20vw;
+    margin-top: 4rem;
+  }
   #hobby .hobbies img {
     display: none;
+  }
+  #hobby .hobbies ul li {
+    font-size: 1.6rem;
   }
 }
 

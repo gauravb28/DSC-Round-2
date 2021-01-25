@@ -144,19 +144,21 @@
   }
 }
 
+@media (max-width: 400px) {
+  #hobby {
+    .hobbies {
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
 @media (max-width: 375px) {
   #about {
     .content {
       p {
         font-size: 1.35rem;
-      }
-    }
-  }
-
-  #hobby {
-    .hobbies {
-      img {
-        display: none;
       }
     }
   }
